@@ -9,6 +9,11 @@ public class Cipher {
         this.shift = shift;
     }
 
+    public void setShift(int newShift){
+        this.shift = newShift;
+    }
+
+
     public  String getEncryption(){
         String alphabet ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         Integer stringPosition=0;

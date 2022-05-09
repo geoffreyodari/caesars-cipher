@@ -12,8 +12,11 @@ public class App{
       String inputString = input.readLine();
       System.out.println("Please enter the cipher digit 1-23.");
       BufferedReader inputNumberString = new BufferedReader(new InputStreamReader(System.in));
+
       Integer inputInteger = Integer.parseInt(inputNumberString.readLine());
-      String output = new Cipher(inputString,inputInteger).getEncryption();
+      Cipher outputObject = new Cipher(inputString,inputInteger);
+      String output = outputObject.getEncryption();
+
       System.out.println("Your encrypted message is.");
       System.out.println(output );
 
