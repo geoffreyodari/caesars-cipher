@@ -7,9 +7,12 @@ public class Cipher {
         String output = "";
 
         for(int i = 0;i <word.length();i++){
-            stringPosition = alphabet.indexOf(word.charAt(i)+cipher);
+            stringPosition = alphabet.indexOf(word.charAt(i))+cipher;
+
             if(stringPosition<26){
                 output +=alphabet.charAt(stringPosition);
+            }else if(stringPosition>=26){
+                output +=alphabet.charAt(stringPosition-26);
             }
 
         }
