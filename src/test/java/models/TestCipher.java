@@ -25,4 +25,11 @@ public class TestCipher {
         String actualOutput = new Cipher().startEncryption("Z",2);
         assertEquals(expectedOutput,actualOutput);
     }
+
+    @Test
+    public void cipher_testIgnoreSpacesSymbolAndNumbers_1(){
+        String expectedOutput = "NZ OBNF JT...";
+        String actualOutput = new Cipher().startEncryption("MY NAME IS...",1);
+        assertEquals(expectedOutput,actualOutput);
+    }
 }
