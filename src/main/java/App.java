@@ -10,10 +10,11 @@ public class App{
       System.out.println("Please enter word or sentence for Encryption.");
       BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
       String inputString = input.readLine();
-      System.out.println("Please enter the cipher digit 1-10.");
+      System.out.println("Please enter the cipher digit 1-23.");
       BufferedReader inputNumberString = new BufferedReader(new InputStreamReader(System.in));
       Integer inputInteger = Integer.parseInt(inputNumberString.readLine());
       String output = new Cipher(inputString,inputInteger).getEncryption();
+      System.out.println("Your encrypted message is.");
       System.out.println(output );
 
   }
