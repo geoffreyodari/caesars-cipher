@@ -9,7 +9,7 @@ public class Cipher {
         this.shift = shift;
     }
 
-    public  String startEncryption(){
+    public  String getEncryption(){
         String alphabet ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         Integer stringPosition=0;
         String output = "";
