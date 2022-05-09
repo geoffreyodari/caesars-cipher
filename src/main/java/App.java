@@ -13,7 +13,7 @@ public class App{
       System.out.println("Please enter the cipher digit 1-10.");
       BufferedReader inputNumberString = new BufferedReader(new InputStreamReader(System.in));
       Integer inputInteger = Integer.parseInt(inputNumberString.readLine());
-      String output = new Cipher().startEncryption(inputString,inputInteger);
+      String output = new Cipher(inputString,inputInteger).startEncryption();
       System.out.println(output );
 
   }

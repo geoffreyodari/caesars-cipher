@@ -8,28 +8,28 @@ public class TestCipher {
     @Test
     public void cipher_testShiftAtoB(){
         String expectedOutput = "B";
-        String actualOutput = new Cipher().startEncryption("A",1);
+        String actualOutput = new Cipher("A",1).startEncryption();
         assertEquals(expectedOutput,actualOutput);
     }
 
     @Test
     public void cipher_testShiftZtoA_1(){
         String expectedOutput = "A";
-        String actualOutput = new Cipher().startEncryption("Z",1);
+        String actualOutput = new Cipher("Z",1).startEncryption();
         assertEquals(expectedOutput,actualOutput);
     }
 
     @Test
     public void cipher_testShiftZtoB_2(){
         String expectedOutput = "B";
-        String actualOutput = new Cipher().startEncryption("Z",2);
+        String actualOutput = new Cipher("Z",2).startEncryption();
         assertEquals(expectedOutput,actualOutput);
     }
 
     @Test
     public void cipher_IgnoreNonAlphabetCharacters(){
         String expectedOutput = "NZ OBNF JT...";
-        String actualOutput = new Cipher().startEncryption("MY NAME IS...",1);
+        String actualOutput = new Cipher("MY NAME IS...",1).startEncryption();
         assertEquals(expectedOutput,actualOutput);
     }
 }
