@@ -2,16 +2,15 @@ package models;
 
 public class Cipher {
     public static String startEncryption(String word,Integer cipher){
-        String originalMessage = word;
         String alphabet ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        String output = null;
-        int newCharacterPosition;
+        Integer stringPosition=0;
+        String output = "";
 
-
-        for(int i = 1;i <= originalMessage.length();i++){
-
-            newCharacterPosition = alphabet.indexOf(originalMessage.charAt(i))+cipher;
-            output += alphabet.charAt(newCharacterPosition);
+        for(int i = 0;i <word.length();i++){
+            stringPosition = alphabet.indexOf(word.charAt(i)+cipher);
+            if(stringPosition<26){
+                output +=alphabet.charAt(stringPosition);
+            }
 
         }
 
