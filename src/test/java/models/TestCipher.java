@@ -27,7 +27,7 @@ public class TestCipher {
     }
 
     @Test
-    public void cipher_testIgnoreSpacesSymbolAndNumbers_1(){
+    public void cipher_IgnoreNonAlphabetCharacters(){
         String expectedOutput = "NZ OBNF JT...";
         String actualOutput = new Cipher().startEncryption("MY NAME IS...",1);
         assertEquals(expectedOutput,actualOutput);
